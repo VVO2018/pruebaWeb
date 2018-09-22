@@ -1,0 +1,100 @@
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba
+$ git init
+Initialized empty Git repository in D:/Users/cristian.reyes/Documents/prueba/.gi             t/
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git remote add origin https://github.com/cristianreyes214/pruebaWeb.git
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git remote add fork https://github.com/cristianreyes214/pruebaWeb.git
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git fetch --all
+Fetching origin
+Fetching fork
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git remote -v
+fork    https://github.com/cristianreyes214/pruebaWeb.git (fetch)
+fork    https://github.com/cristianreyes214/pruebaWeb.git (push)
+origin  https://github.com/cristianreyes214/pruebaWeb.git (fetch)
+origin  https://github.com/cristianreyes214/pruebaWeb.git (push)
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git config --global user.email "cristian.reyes@uao.edu.co"
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git config --global user.name "cristianreyes214"
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git remote -v
+fork    https://github.com/cristianreyes214/pruebaWeb.git (fetch)
+fork    https://github.com/cristianreyes214/pruebaWeb.git (push)
+origin  https://github.com/cristianreyes214/pruebaWeb.git (fetch)
+origin  https://github.com/cristianreyes214/pruebaWeb.git (push)
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git add texto1.txt
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   texto1.txt
+
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git push fork master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/cristianreyes214/pruebaWe             b.git'
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git commit -m "subiendo..."
+[master (root-commit) ea6e474] subiendo...
+ 1 file changed, 1 insertion(+)
+ create mode 100644 texto1.txt
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git push fork master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 230 bytes | 230.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/cristianreyes214/pruebaWeb/pull/new/master
+remote:
+To https://github.com/cristianreyes214/pruebaWeb.git
+ * [new branch]      master -> master
+
+cristian.reyes@SCG-14V-D58738 MINGW64 ~/Documents/prueba (master)
+$ git pull origin master
+From https://github.com/cristianreyes214/pruebaWeb
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+Already up to date.
